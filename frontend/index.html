@@ -43,7 +43,7 @@ header {
 }
 .loginBtn{
     padding: 10px 20px;
-    position: absolute;
+    position: absolute left;
     top: 20px;
     nav-right: 20px;
     text-decoration: none;
@@ -51,11 +51,10 @@ header {
 #profile-section {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 15px;
+    gap: 10px;
     position: absolute;
     top: 20px;
-    nav-left: 20px;
+    right: 20px;
 }
 .profile-pic {
     width: 50px;
@@ -198,6 +197,48 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* ... your existing CSS ... */
+
+/* Responsive Design for Login and Profile */
+@media (max-width: 768px) {
+    #profile-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align to the start */
+        position: static; /* Remove absolute positioning */
+        margin-top: 10px; /* Add some space from the top */
+        gap: 5px; /* Reduce gap between items */
+    }
+
+    .loginBtn, .profile-pic {
+        width: auto; /* Allow auto width */
+        height: auto; /* Allow auto height */
+        margin: 5px 0; /* Add margin for spacing */
+    }
+
+    /* If you want to completely hide them, use this instead: */
+    /* #profile-section {
+        display: none;
+    } */
+
+    /* If you want to replace them with a menu icon: */
+    /* #profile-section {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    } */
+}
+
+/* Add menu icon styles if you choose to use a menu icon */
+/*.menu-icon {
+    display: none; /* Hide by default */
+    /* Add your menu icon styles here */
+}*/
 
     </style>
     <!-- <link rel="stylesheet" href="style.css"> -->

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,248 +8,253 @@
     <style>
         /* General Styles */
         body {
-    background: url('./assets/images/omni.jpg') center/cover no-repeat;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a2e;
-    color: #ffffff;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+            background: url('./assets/images/omni.jpg') center/cover no-repeat;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
 
-.container {
-    width: 85%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-/* Header Styles */
-header {
-    background: linear-gradient(to bottom, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0)), url('invincible.jpg') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 150px 0;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(252, 159, 216, 0.5);
-}
+        /* Header Styles */
+        header {
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0)), url('invincible.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            /* padding: 150px 0; */
+            position: relative;
+            box-shadow: 0 10px 30px rgba(252, 159, 216, 0.5);
+        }
 
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: fadeIn 1.2s forwards ease-in-out;
-}
-.loginBtn{
-    padding: 10px 20px;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    text-decoration: none;
-}
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1.2s forwards ease-in-out;
+        }
 
-#profile-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-.profile-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    object-fit: cover;
-    border: 2px solid #fff;
-}
-#fileInput {
-    display: none;
-}
+        .loginBtn {
+            padding: 10px 20px;
+            text-decoration: none;
+        }
 
+        #profile-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: content-box;
+            margin: 0 auto;
+            padding: 50px 0;
+            width: 100%;
+            top: 0;
+        }
 
-.hidden {
-    display: none;
-}
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            object-fit: cover;
+            border: 2px solid #fff;
+        }
+
+        #fileInput {
+            display: none;
+        }
 
 
-h1 {
-    font-size: 3.5em;
-    margin-bottom: 15px;
-    background: linear-gradient(45deg, #ff6b6b, #6a5acd);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+        .hidden {
+            display: none;
+        }
 
-p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
 
-.cta-button {
-    background: linear-gradient(90deg, #ff6b6b, #6a5acd);
-    color: white;
-    padding: 15px 35px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.2em;
-    font-weight: bold; /* Improved readability */
-    letter-spacing: 1px; /* Better spacing */
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
-}
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #ff6b6b, #6a5acd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-.cta-button:hover {
-    background: linear-gradient(90deg, #6a5acd, #ff6b6b);
-    transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(255, 107, 107, 0.5);
-}
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
 
-/* Features Section */
-.section {
-    padding: 80px 0;
-    text-align: center;
-}
+        .cta-button {
+            background: linear-gradient(90deg, #ff6b6b, #6a5acd);
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            /* Improved readability */
+            letter-spacing: 1px;
+            /* Better spacing */
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+        }
 
-#features {
-    background: #2222224f;
-    border-radius: 10px;
-    padding: 60px 0;
-}
+        .cta-button:hover {
+            background: linear-gradient(90deg, #6a5acd, #ff6b6b);
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(255, 107, 107, 0.5);
+        }
 
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
+        /* Features Section */
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
 
-.feature-item img {
-    width: 90px;
-    margin-bottom: 20px;
-    transition: transform 0.4s ease-in-out;
-}
+        #features {
+            background: #2222224f;
+            border-radius: 10px;
+            padding: 60px 0;
+        }
 
-.feature-item img:hover {
-    transform: scale(1.2) rotate(5deg);
-}
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
 
-/* Testimonials */
-#testimonials {
-    background: linear-gradient(135deg, #ff6b6b17, #695acd10);
-    padding: 60px 0;
-    border-radius: 10px;
-}
+        .feature-item img {
+            width: 90px;
+            margin-bottom: 20px;
+            transition: transform 0.4s ease-in-out;
+        }
 
-.testimonial-slider {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-}
+        .feature-item img:hover {
+            transform: scale(1.2) rotate(5deg);
+        }
 
-.testimonial-item {
-    padding: 25px;
-    border-radius: 12px;
-    margin: 20px;
-    background: #1e1e2e02;
-    display: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
+        /* Testimonials */
+        #testimonials {
+            background: linear-gradient(135deg, #ff6b6b17, #695acd10);
+            padding: 60px 0;
+            border-radius: 10px;
+        }
 
-.testimonial-item.active {
-    display: block;
-}
+        .testimonial-slider {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
 
-/* Footer */
-footer {
-    background-color: #11111100;
-    color: rgb(255, 244, 254);
-    text-align: center;
-    padding: 30px 0;
-    border-top: 2px solid #6a5acd;
-}
+        .testimonial-item {
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px;
+            background: #1e1e2e02;
+            display: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        .testimonial-item.active {
+            display: block;
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
+        /* Footer */
+        footer {
+            background-color: #11111100;
+            color: rgb(255, 244, 254);
+            text-align: center;
+            padding: 30px 0;
+            border-top: 2px solid #6a5acd;
+        }
 
-    h1 {
-        font-size: 2.8em;
-    }
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
 
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* ... your existing CSS ... */
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-/* Responsive Design for Login and Profile */
-@media (max-width: 768px) {
-    #profile-section {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align to the start */
-        position: static; /* Remove absolute positioning */
-        margin-top: 10px; /* Add some space from the top */
-        gap: 5px; /* Reduce gap between items */
-    }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
 
-    .loginBtn, .profile-pic {
-        width: auto; /* Allow auto width */
-        height: auto; /* Allow auto height */
-        margin: 5px 0; /* Add margin for spacing */
-    }
+            h1 {
+                font-size: 2.8em;
+            }
 
-    /* If you want to completely hide them, use this instead: */
-    /* #profile-section {
-        display: none;
-    } */
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
-    /* If you want to replace them with a menu icon: */
-    /* #profile-section {
-        display: none;
-    }
+        /* ... your existing CSS ... */
+
+        /* Responsive Design for Login and Profile */
+        @media (max-width: 768px) {
+            #profile-section {
+                flex-direction: column;
+                /* Stack items vertically */
+                align-items: flex-start;
+                /* Align to the start */
+                position: static;
+                /* Remove absolute positioning */
+                margin-top: 10px;
+                /* Add some space from the top */
+                gap: 5px;
+                /* Reduce gap between items */
+            }
+
+            .loginBtn,
+            .profile-pic {
+                width: auto;
+                /* Allow auto width */
+                height: auto;
+                /* Allow auto height */
+                margin: 5px 0;
+                /* Add margin for spacing */
+            }
 
     .menu-icon {
         display: block; /* Show the menu icon */
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-    } 
-}
-
-
-
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+    }
     </style>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="container">
             <div id="profile-section">
-                <img id="profilePic" src="assets/images/default-profile.jpg" class="profile-pic" alt="Profile Picture" onclick="document.getElementById('fileInput').click();">
+                <img id="profilePic" src="assets/images/default-profile.jpg" class="profile-pic" alt="Profile Picture"
+                    onclick="document.getElementById('fileInput').click();">
                 <input type="file" id="fileInput" accept="image/*">
                 <a href="login.html" class="loginBtn cta-button">Login</a>
             </div>
@@ -259,33 +265,33 @@ footer {
             </div>
         </div>
     </header>
-    
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                let profilePic = document.getElementById("profilePic");
-                let fileInput = document.getElementById("fileInput");
-    
-                // Load saved profile picture from local storage
-                if (localStorage.getItem("profilePic")) {
-                    profilePic.src = localStorage.getItem("profilePic");
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let profilePic = document.getElementById("profilePic");
+            let fileInput = document.getElementById("fileInput");
+
+            // Load saved profile picture from local storage
+            if (localStorage.getItem("profilePic")) {
+                profilePic.src = localStorage.getItem("profilePic");
+            }
+
+            fileInput.addEventListener("change", function (event) {
+                let file = event.target.files[0];
+                if (file) {
+                    let reader = new FileReader();
+                    reader.onload = function (e) {
+                        profilePic.src = e.target.result;
+                        localStorage.setItem("profilePic", e.target.result); // Save in local storage
+                    };
+                    reader.readAsDataURL(file);
                 }
-    
-                fileInput.addEventListener("change", function(event) {
-                    let file = event.target.files[0];
-                    if (file) {
-                        let reader = new FileReader();
-                        reader.onload = function(e) {
-                            profilePic.src = e.target.result;
-                            localStorage.setItem("profilePic", e.target.result); // Save in local storage
-                        };
-                        reader.readAsDataURL(file);
-                    }
-                });
             });
-        </script>
-        
-     
+        });
+    </script>
+
+
     <main>
         <section id="features" class="section animate-slide-in">
             <div class="container" data-aos="fade-up" data-aos-anchor-placement="center-center">
@@ -306,7 +312,7 @@ footer {
                 </div>
             </div>
         </section>
-        
+
         <section id="featured-stories" class="section animate-slide-in">
             <div class="container" data-aos="fade-up" data-aos-anchor-placement="center-center">
                 <h2>Featured Stories</h2>
@@ -322,27 +328,27 @@ footer {
                         <p><strong>Genre:</strong> Fantasy</p>
                         <p>The kingdom's fate now lies in the hands of unexpected heroes.</p>
                         <a href="downloads/The_Lost_Kingdom_Part2.pdf" class="cta-button" download>Download PDF</a>
-                        
+
                     </div>
                     <div class="story-item">
                         <h3>The Lost Kingdom: Last Laugh</h3>
                         <p><strong>Genre:</strong> Fantasy</p>
                         <p>A final battle that will determine the kingdom’s true destiny.</p>
                         <a href="downloads/The_Lost_Kingdom_Part3.pdf" class="cta-button" download>Download PDF</a>
-                        
+
                     </div>
-                    
+
                 </div>
             </div>
         </section>
 
         <section id="testimonials" class="section animate-fade-in">
-            <div class="container" data-aos="fade-up"
-            data-aos-anchor-placement="center-center">
+            <div class="container" data-aos="fade-up" data-aos-anchor-placement="center-center">
                 <h2>What Our Users Say</h2>
                 <div class="testimonial-slider">
                     <div class="testimonial-item active">
-                        <p>"StoryCraft has changed the way I write! The branching paths make storytelling so engaging."</p>
+                        <p>"StoryCraft has changed the way I write! The branching paths make storytelling so engaging."
+                        </p>
                         <p class="author">- Shibam Basu, Fantasy Writer</p>
                     </div>
                     <div class="testimonial-item">
@@ -366,7 +372,7 @@ footer {
         </section>
 
         <section id="cta-secondary" class="section secondary-cta animate-slide-in">
-            <div class="container" >
+            <div class="container">
                 <h2>Ready to Start Your Adventure?</h2>
                 <button class="cta-button" onclick="scrollToSection('features')">Create Now</button>
             </div>
@@ -378,14 +384,15 @@ footer {
             <p>&copy; 2025 StoryCraft. All rights reserved.</p>
         </div>
     </footer>
-    
+
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-  AOS.init({
-    once: true,  // Ensures animation only runs once per session
-    delay: 100,  // Adds a slight delay for smoother effect
-});
-</script>
+        AOS.init({
+            once: true,  // Ensures animation only runs once per session
+            delay: 100,  // Adds a slight delay for smoother effect
+        });
+    </script>
 </body>
+
 </html>
